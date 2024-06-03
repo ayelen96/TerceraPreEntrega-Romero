@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Buscar</h2>
+  <form method="get">
+    <input type="text" name="query" placeholder="Buscar...">
+    <button type="submit">Buscar</button>
+  </form>
+
+  <h3>Resultados Profesores</h3>
+  <ul>
+    {% for profesor in profesores %}
+      <li>{{ profesor.nombre }} {{ profesor.apellido }}</li>
+    {% empty %}
+      <li>No se encontraron profesores.</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Resultados Estudiantes</h3>
+  <ul>
+    {% for estudiante in estudiantes %}
+      <li>{{ estudiante.nombre }} {{ estudiante.apellido }}</li>
+    {% empty %}
+      <li>No se encontraron estudiantes.</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Resultados Cursos</h3>
+  <ul>
+    {% for curso in cursos %}
+      <li>{{ curso.nombre }}</li>
+    {% empty %}
+      <li>No se encontraron cursos.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

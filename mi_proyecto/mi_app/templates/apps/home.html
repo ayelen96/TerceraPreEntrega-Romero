@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Bienvenido a la gestión de la escuela</h1>
+  <a href="{% url 'agregar_profesor' %}">Agregar Profesor</a>
+  <a href="{% url 'agregar_estudiante' %}">Agregar Estudiante</a>
+  <a href="{% url 'agregar_curso' %}">Agregar Curso</a>
+  <a href="{% url 'buscar' %}">Buscar</a>
+{% endblock %}
